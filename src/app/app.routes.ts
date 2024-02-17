@@ -10,6 +10,9 @@ import { Luff2023Component } from './pages/luff/luff-2023/luff-2023.component';
 import { PiedraAltaComponent } from './pages/hats/piedraAlta/piedraAlta.component';
 import { RelampagoComponent } from './pages/hats/relampago/relampago.component';
 import { EspirituComponent } from './pages/hats/espiritu/espiritu.component';
+import { RejunteComponent } from './pages/equipos/rejunte/rejunte.component';
+import { FenixComponent } from './pages/equipos/fenix/fenix.component';
+import { MaoriComponent } from './pages/equipos/maori/maori.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -28,7 +31,13 @@ export const routes: Routes = [
         ]
     },
     { path: 'noticias', component: NoticiasComponent },
-    { path: 'equipos', component: EquiposComponent },
+    { path: 'equipos', component: EquiposComponent,
+        children: [
+            { path: 'rejunte', component: RejunteComponent },
+            { path: 'fenix', component: FenixComponent },
+            { path: 'maori', component: MaoriComponent },
+        ]
+    },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
