@@ -5,12 +5,30 @@ import { LuffComponent } from './pages/luff/luff.component';
 import { HatsComponent } from './pages/hats/hats.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { EquiposComponent } from './pages/equipos/equipos.component';
+import { Luff2017Component } from './pages/luff/luff-2017/luff-2017.component';
+import { Luff2023Component } from './pages/luff/luff-2023/luff-2023.component';
+import { PiedraAltaComponent } from './pages/hats/piedraAlta/piedraAlta.component';
+import { RelampagoComponent } from './pages/hats/relampago/relampago.component';
+import { EspirituComponent } from './pages/hats/espiritu/espiritu.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'ultimate', component: UltimateComponent },
-    { path: 'luff', component: LuffComponent },
-    { path: 'hats', component: HatsComponent },
+    { path: 'luff', component: LuffComponent,
+        children: [
+            { path: 'luff-2017', component: Luff2017Component },
+            { path: 'luff-2023', component: Luff2023Component }
+        ]    
+    },
+    { path: 'hats', component: HatsComponent,
+        children: [
+            { path: 'piedraAlta', component: PiedraAltaComponent },
+            { path: 'relampago', component: RelampagoComponent },
+            { path: 'espiritu', component: EspirituComponent },
+        ]
+    },
     { path: 'noticias', component: NoticiasComponent },
-    { path: 'equipos', component: EquiposComponent }
+    { path: 'equipos', component: EquiposComponent },
+    { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
+
