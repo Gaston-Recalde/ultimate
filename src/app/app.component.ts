@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
+import { RouterOutlet } from '@angular/router';
+import { SidenavComponent } from './shared/sidenav/sidenav.component';
 
 @Component({
   selector: 'app-root',
@@ -13,24 +9,9 @@ import {MatListModule} from '@angular/material/list';
   imports: [
     CommonModule, 
     RouterOutlet,
-    RouterLink,
-    MatSidenavModule,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatListModule
+    SidenavComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'ultimate';
-
-  public sidenarItems = [
-    { label: 'Ultimate', icon: 'label', url: './ultimate' },
-    { label: 'LUFF', icon: 'add', url: './luff' },
-    { label: 'Hats', icon: 'add', url: './hats' },
-    { label: 'Noticias', icon: 'search', url: './noticias' },
-    { label: 'Equipos', icon: 'search', url: './equipos' },
-  ]
-}
+export class AppComponent {}
