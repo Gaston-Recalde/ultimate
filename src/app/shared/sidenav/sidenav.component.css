@@ -1,3 +1,15 @@
 :host {
   display: block;
 }
+
+@media (min-width: 900px) {
+  #menuIcon, .menuLogo {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .menuItem {
+    display: none;
+  }
+}

@@ -28,6 +28,7 @@ export class SidenavComponent {
   title = 'ultimate';
 
   public sidenarItems = [
+    { label: 'Inicio', icon: 'label', url: './home' },
     { label: 'Ultimate', icon: 'label', url: './ultimate' },
     { label: 'LUFF', icon: 'add', url: './luff' },
     { label: 'Hats', icon: 'add', url: './hats' },
