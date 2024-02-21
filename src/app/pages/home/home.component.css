@@ -1,3 +1,41 @@
 :host {
   display: block;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-top: 70px;
+}
+.header__title {
+  font-size: 56px;
+  margin-bottom: 70px;
+}
+
+.header__p{
+    font-size: 16px;
+    max-width: 700px;
+    text-align: center;
+
+    span{
+      font-weight: 500;
+    }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-top: 70px;
+}
+
+.example-card {
+  max-width: 400px;
+}
